@@ -9,7 +9,7 @@ class EAN extends Barcode {
 		super(data, options);
 
 		// Make sure the font is not bigger than the space between the guard bars
-		this.fontSize = !options.flat && options.fontSize > options.width * 10
+		this.fontSize = !options.flat && !options.fontSize && options.fontSize > options.width * 10
 			? options.width * 10
 			: options.fontSize;
 
